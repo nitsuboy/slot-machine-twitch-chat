@@ -28,12 +28,8 @@ function recivedMessage(target, context, msg, bot) {
     if (bot) {
         return;
     }
-  
-    if (msg == "!ola") {
-        client.say(target, "Olá Mundo!");
-    }
 
-    if (msg == "!slot") {
+    if (msg.toLowerCase() == "!slot") {
         last = context.username
     }
 }

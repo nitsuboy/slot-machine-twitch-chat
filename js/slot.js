@@ -52,6 +52,9 @@ setInterval(() => {
             if(!(text === "")){
                 rollall()
                 nome.textContent = text
+            }else{
+                nome.textContent = "!SLOT"
+                premio.textContent = "⠀"
             }
         })
 }, 5000)

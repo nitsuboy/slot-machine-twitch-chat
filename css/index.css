@@ -2,6 +2,7 @@
     --wid: 79px;
     --hig: 79px;
     --num: 9;
+    --mar: -60px;
 }
 
 * {
@@ -11,28 +12,40 @@
 
 body {
     height: 100vh;
-    background-color: #00ff00;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.skin {
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skinimage {
+    position: absolute;
+    content: url("/images/skin.png");
+    width: 520px;
+    height: 410px;
+}
+
 .slots {
-    position: relative;
-    background-color: gray;
+
     height: calc(3*var(--hig));
     display: flex;
     justify-content: center;
     gap: 16px;
-    padding: 20px;
-    margin-top: -60px;
-    margin-bottom: -60px;
 }
 
 .slots>.reel {
     
-    width: calc(var(--wid) + 4px);
+    width: calc(var(--wid));
     height: calc(3*var(--hig));
     background-image: url("/images/slotreel.webp");
     background-repeat: repeat-y;
@@ -46,19 +59,11 @@ body {
 }
 
 .nb {
-    animation: blinking .2s infinite;
-}
-
-.skin {
-    position:absolute;
-    top: -87px;
-    right: -106px;
-    width: 539px;
-    height: 450px;
-    content: url("/images/skin.png");
+    animation: blinking .2s;
 }
 
 span {
+    margin: 15px;
     z-index: 1;
     font-size: 30px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
